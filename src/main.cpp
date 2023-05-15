@@ -104,7 +104,7 @@
 #define SLEEP_EN
 
 // If SLEEP_EN is defined, MCU will sleep for SLEEP_INTERVAL seconds after succesful transmission
-#define SLEEP_INTERVAL 30
+#define SLEEP_INTERVAL 60*10
 
 // Force deep sleep after a certain time, even if transmission was not completed
 #define FORCE_SLEEP
@@ -472,7 +472,7 @@ void ReceiveCb(
     char buf[255];
     *buf = '\0';
 
-    if (uPort >= 0) {
+    if (uPort > 0) {
         for (int i = 0; i < nBuffer; i++) {
               sprintf(&buf[strlen(buf)], "%02X ", pBuffer[i]);
         }
