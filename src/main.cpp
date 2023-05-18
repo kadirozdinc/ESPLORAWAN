@@ -104,7 +104,7 @@
 #define SLEEP_EN
 
 // If SLEEP_EN is defined, MCU will sleep for SLEEP_INTERVAL seconds after succesful transmission
-#define SLEEP_INTERVAL 60*10
+#define SLEEP_INTERVAL 30
 
 // Force deep sleep after a certain time, even if transmission was not completed
 #define FORCE_SLEEP
@@ -481,6 +481,7 @@ void ReceiveCb(
     }
 }
 //--------------add by me -----------------------------
+
 // our setup routine does the class setup and then registers an event handler so
 // we can see some interesting things
 void
